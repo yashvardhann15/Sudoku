@@ -1,0 +1,371 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.menu {
+  position: fixed;
+  left: -380px;
+  top: 0;
+  height: 100%;
+  width: 380px;
+  background-color: rgb(244, 244, 244); 
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s;
+  transition: 0.5s;
+}
+
+body.dark .menu{
+  background-color: #444444;
+  color: #ffffff;
+
+}
+
+.menu h1 {
+  font-size: 4rem;
+  padding-top: 40px;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+.menu button {
+  width: 60%;
+  margin-left: 60px;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 1px solid #4CAF50;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu button:hover {
+  background-color: #4CAF50;
+}
+
+.menu #close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.menu #close-btn:hover {
+  color: #4CAF50;
+}
+
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #333333;
+  color: white;
+}
+
+body.dark .menu {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+.hidden{
+  display: none;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgb(141, 141, 141);
+}
+
+h1 {
+  margin-top: 60px;
+  font-size: 4rem;
+}
+
+
+#setup-game {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+#setup-game label input {
+  margin-right: 10px;
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#setup-game label input:checked {
+  background-color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+
+#setup-game label {
+  display: flex;
+  margin-right: 15px;
+  align-items: center; /* Align items vertically */
+  margin-left: 15px;
+  font-size: 1.5rem; /* Increased font size */
+  cursor: pointer;
+}
+
+#setup-game label input {
+  /* margin-right: 5px; */
+  margin-right: 10px;
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#setup-game > * {
+  margin-top: 20px;
+  margin-bottom: 80px;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1.8rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #318435;
+}
+
+#stats {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+#timer,
+#lives {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 20px;
+  justify-content: space-between;
+}
+
+#game {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#number-container {
+  margin-top: 80px;
+  margin-bottom: 200px;
+}
+
+#number-container > p {
+  border: 1px solid black;
+  border-radius: 20%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  margin: 10px 40px 0px;
+  text-align: center;
+  cursor: pointer;
+  padding: 2px;
+  transition: background-color 0.3s;
+}
+
+body.dark #number-container > p:hover,
+body #number-container > p:hover {
+  background-color: #f0f0f0;
+}
+
+body.dark #number-container > p.selected,
+body #number-container > p.selected {
+  background-color: lightblue;
+}
+
+body.dark #number-container p{
+  border-color: #ffffffd3;
+}
+
+body.dark #number-container > p.incorrect,
+body #number-container > p.incorrect {
+  color: red;
+}
+
+#board {
+  padding-top: 0px;
+  margin-top: 60px;
+  /* margin-left: 60px; */
+  margin-bottom: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  width: 593px;
+  height: 593px;
+}
+
+
+body.dark .tile ,body.dark #number-container{
+        border-color: #ffffffd3;
+}
+
+.tile {
+  border: 1px solid black;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  margin: 0;
+  font-size: 2rem;
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tile:hover {
+  background-color: #ffffffd3;
+}
+
+p.selected {
+  background-color: rgb(219, 230, 173);
+}
+
+body.dark p.selected {
+  background-color: rgb(219, 230, 173);
+}
+
+.highlight {
+  background-color: #ffea94;
+}
+
+.highlightt {
+  background-color: #d9c497;
+}
+
+body.dark .highlight {
+  background-color: #fbb51d;
+}
+
+body.dark .highlightt {
+  background-color: #9b7200;
+}
+
+p.incorrect {
+  color: red;
+}
+
+.rightBorder {
+  border-right: 4px solid black;
+}
+
+.bottomBorder {
+  border-bottom: 4px solid black;
+}
+
+footer {
+  background-color: rgb(244, 244, 244);
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+body.dark     footer {
+  background-color: #515151;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #4CAF50;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .menu {
+    width: 100%;
+    left: -100%;
+  }
+
+  .menu button {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .menu h1 {
+    font-size: 3rem;
+    padding-top: 20px;
+  }
+
+
+}

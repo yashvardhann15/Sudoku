@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sudoku</title>
+      <link rel="stylesheet" href="sudoku.css">
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="sudoku.js"></script>
+</head>
+
+
+
+<header>
+      <div class="overlay" id="overlay">
+            <div class="loader"></div>
+      </div>
+      <h1>Sudoku</h1>
+      <div id="setup-game">
+
+            <div id="diff">
+                  <h2>Choose Difficulty: </h2>
+                  <label><input id="diff-1" type="radio" name="diff" value="easy" checked>Easy</label>
+                  <label><input id="diff-2" type="radio" name="diff" value="medium">Medium</label>
+                  <label><input id="diff-3" type="radio" name="diff" value="hard">Hard</label>
+            </div>
+
+            <div id="time">
+                  <h2>Choose Time: </h2>
+                  <label><input id="time-0" type="radio" name="time" value="noBound" checked>Unlimited</label>
+                  <label><input id="time-1" type="radio" name="time" value="three">5 Min</label>
+                  <label><input id="time-2" type="radio" name="time" value="five">10 Min</label>
+                  <label><input id="time-3" type="radio" name="time" value="hard">20 Min</label>
+            </div>
+
+            <div id="theme">
+                  <h2>Choose theme: </h2>
+                  <label><input id="theme-1" type="radio" name="theme" value="light" checked onclick="theme()">Light</label>
+                  <label><input id="theme-2" type="radio" name="theme" value="dark" onclick="theme()">Dark</label>
+            </div>
+
+      </div>
+
+      <button id="menu-btn"  onclick="toggleMenu()">MENU</button>
+</header>
+
+
+
+<body>
+
+      <div id="stats">
+            <p id="timer"></p>
+            <p id="lives"></p>
+            <div id="pause-res"></div>
+      </div>
+
+      <div id="game">
+            <div id="board"></div>
+
+            <div id="number-container" class="hidden">
+                  <p id="one">1</p>
+                  <p id="two">2</p>
+                  <p id="three">3</p>
+                  <p id="four">4</p>
+                  <p id="five">5</p>
+                  <p id="six">6</p>
+                  <p id="seven">7</p>
+                  <p id="eight">8</p>
+                  <p id="nine">9</p>
+            </div>
+      </div>
+      <div class="menu" id="side-menu">
+            <div id="close-btn" onclick="toggleMenu()">&times;</div>
+            <h1>Sudoku</h1>
+            <button id="start-btn" onclick="startGame()">New Game</button>
+            <button onclick="pauseGame()" id="pause">Pause Game</button>
+            <button onclick="restartGame()">Restart</button>
+            <button onclick="window.location.href = 'index.html';"> Return to Home</button>
+        </div>
+</body>
+
+
+
+<footer>
+      <p>By Yashvardhan</p>
+</footer>
+</html>
