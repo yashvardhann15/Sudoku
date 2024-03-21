@@ -17,10 +17,6 @@ var disableSelect;
 
 
 
-const api_keyai = "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";
-var hintAvai = 3;
-
-
 
 
 function showOverlay() {
